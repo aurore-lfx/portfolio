@@ -73,6 +73,30 @@ em {
 .margin-t { margin-top: 3rem; }
 .margin-b { margin-bottom: 3rem; }
 
+/* Soulignement propre pour tous les liens */
+a {
+    text-decoration: none;
+    position: relative;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Ajuste selon ton goût */
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    transition: transform 0.3s var(--ease-editorial);
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+}
+
+
 /* ==========================================================================
    NAVIGATION
    ========================================================================== */
@@ -171,16 +195,6 @@ em {
     font-size: 1rem;
 }
 
-/* Appels à l'action sophistiqués */
-.cta-link {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    border-bottom: 1px solid var(--text-main);
-    padding-bottom: 0.5rem;
-}
 
 .cta-arrow {
     transition: transform 0.5s var(--ease-editorial);
@@ -292,11 +306,6 @@ em {
     margin-bottom: 4rem;
 }
 
-.cs-brief {
-    display: flex;
-    justify-content: flex-end;
-}
-
 .brief-text {
     max-width: 500px;
     color: var(--text-muted);
@@ -317,6 +326,10 @@ em {
 
 .cs-sticky-index {
     align-self: start;
+}
+
+.visual-row img {
+    margin: auto 50%;
 }
 
 .big-number {
@@ -386,6 +399,16 @@ em {
 }
 
 /* Grilles d'images épurées sans cadres */
+.grid-2-clean {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.grid-3-clean {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
 .grid-4-clean {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -504,5 +527,3 @@ em {
         transform: translateY(3rem);
     }
 }
-style.css
-Affichage de projet.html en cours...
