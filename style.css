@@ -73,6 +73,10 @@ em {
 .margin-t { margin-top: 3rem; }
 .margin-b { margin-bottom: 3rem; }
 
+.pointer {
+    cursor: pointer;
+}
+
 /* Soulignement propre pour tous les liens */
 a {
     text-decoration: none;
@@ -486,6 +490,35 @@ a:hover::after {
     gap: 2rem;
     font-size: 0.875rem;
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 40px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+
 
 /* ==========================================================================
    MEDIA QUERIES (DESKTOP AVANCÉ / SWISS GRID)
